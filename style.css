@@ -1,0 +1,224 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    background-image: linear-gradient(135deg, #54585a 10%, #bdb5c0 100%);
+}
+
+.cardesign{
+    position:relative;
+    width: auto;
+    max-width: 720px;
+    height: auto;
+    border-radius: 25px;
+    padding: 20px 30px 30px 30px;
+    background: #494949;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    z-index: 3;
+    overflow: hidden;
+    color:white;
+}
+
+.objcard{
+    position: relative;
+    width:330px;
+    height: 120px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    justify-content: space-between;
+    float:left;
+    margin-top: 50px;
+}
+
+.objcard .circle{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.objcard .circle::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: #fff;
+    clip-path: circle(45px at center);
+    transition: 0.5s;
+}
+
+.objcard:hover .circle:before{
+    background: #45f3ff;
+    clip-path: circle(320px at center);
+}
+
+.objcard img{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    height: 150px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.objcard:hover img{
+    left:72%;
+    height:200px ;
+}
+
+.objcard .content{
+    position: relative;
+    width:50%;
+    left:20%;
+    padding: 20px 20px 20px 40px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.objcard:hover .content{
+    left:0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.objcard .content h2{
+    color:#fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+.objcard .content p{
+   color:#494949; 
+}
+
+.objcard .content a{
+    position: relative;
+    color:#fff;
+    padding:5px 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #45f3ff;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    display:inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 10px;
+   
+}
+
+.butdesign{
+    width:100%;
+    height:40px;
+    align-items: center;
+    border:none;
+    border-radius: 10px;
+    margin-top:10px;
+    background-color: #45f3ff;
+}
+
+.inBox{
+    position: relative;
+    width:300px;
+    margin-top: 35px;
+}
+
+.form{
+    position: relative;
+}
+
+.form h2{
+    color:#45f3ff;
+    margin-top: 10px;
+}
+
+.inBox input{
+    position: relative;
+    width:100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    color: #23242a;
+    font-size: 16px;
+    z-index: 10;
+
+}
+
+.inBox span{
+    position: absolute;
+    left:0;
+    padding: 20px 0px 10px;
+    font-size: 16px;
+    color:#8f8f8f;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.inBox input:valid ~ span,
+.inBox input:focus ~ span{
+    color:#45f3ff;
+    transform: translateX(0px) translateY(-34px);
+}
+
+.inBox i{
+    position: absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height: 2px;
+    background: #45f3ff;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.inBox input:valid ~ i,
+.inBox input:focus ~ i{
+    height: 44px;
+}
+
+.links{
+    margin-top: 20px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.likns a{
+    
+    margin: 10px 0;
+    font-size: 0.75em;
+    color:#8f8f8f;
+    text-decoration: none;
+}
+
+.links a:hover,
+.links a:nth-child(2)
+{
+    color:#45f3ff;
+}
+
+.cbox{
+    margin-top: 20px;
+    color:#8f8f8f;
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 25px;    
+}
+
