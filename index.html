@@ -7,44 +7,46 @@
 
    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style.css">
 
     <title>Recycle Coin - Log In</title>
   </head>
   <body>
     <div class="cardesign">
-        <div class="form">
+        <div class="form" >
             <div id="signin">
+              <form action="/" method="post">
                 <h2 class="text-center">Sign In</h2>
                 <div class="inBox">
-                    <input type="text" class="border-0" required="required">
+                    <input type="text" name="username" class="border-0" required="required">
                     <span>Username</span>
                     <i></i>
                 </div>
 
                 <div class="inBox">
-                    <input type="password" class="border-0" required="required">
+                    <input type="password" name="password" class="border-0" required="required">
                     <span>Password</span>
                     <i></i>
                 </div>
                 <div class="cbox">
                   <div class="radio">
-                    <input type="radio">
+                    <input type="radio" name="sec" value="admin">
                     Admin
                   </div>
 
                   <div class="radio">
-                    <input type="radio">
+                    <input type="radio" name="sec" value="user">
                     User
                   </div>
                 </div>
 
                 <div class="links">
-                  <a href="#">Forgot Password</a>
+                  <!--<a href="#">Forgot Password</a>-->
                   <a href="signup.html">Signup</a>
                 </div>
-                <input type="button" value="Sign In" class="butdesign">
+                <input type="submit" value="Sign In" class="butdesign">
               </div> 
+             </form>
             </div>
     </div>
 
