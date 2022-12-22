@@ -221,3 +221,8 @@ body{
     margin-inline: 25px;    
 }
 
+.number{
+    width:50px;
+    border: none;
+    border-radius: 5px;
+}
